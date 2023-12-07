@@ -2,4 +2,4 @@
 A repository for code from my University coursework (once I finish working on it)
 
 ## Programs:
-. Ticket Management Program (In development)
+* Ticket Management Program (In development)
