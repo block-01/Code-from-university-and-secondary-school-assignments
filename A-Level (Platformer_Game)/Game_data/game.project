@@ -1,0 +1,25 @@
+[bootstrap]
+main_collection = /main/Menu/main.collectionc
+
+[script]
+shared_state = 1
+
+[android]
+input_method = HiddenInputField
+
+[project]
+title = CompSci_Platformer
+
+[physics]
+debug = 0
+gravity_y = -1000.0
+scale = 0.01
+
+[graphics]
+max_debug_vertices = 999999999
+
+[tilemap]
+max_tile_count = 999999999
+
+[collection_proxy]
+max_count = 200

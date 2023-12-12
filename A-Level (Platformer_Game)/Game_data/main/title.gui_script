@@ -1,0 +1,29 @@
+function init(self)
+	msg.post(".", "acquire_input_focus")
+end
+
+function final(self)
+	msg.post(".", "release_input_focus")
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("hide") then
+		msg.post("#", "disable") --Hides the GUI when a message from the script main.script is recived.
+	end
+end
+
+function on_input(self, action_id, action)
+	if action.released and gui.pick_node(gui.get_node("New_Game"), action.x, action.y) then
+		msg.post("Collection:/controller", "New_Game") --sends a mesage to the script main.script which then loads the Collection Map-01.
+		print ("Loading New Game")
+
+	elseif action.released and gui.pick_node(gui.get_node("Load_Game"), action.x, action.y) then
+    msg.post("Collection:/controller", "Load_Game") --sends a mesage to the script main.script which then loads the Collection LoadGame.
+		print ("loading Load Game menu")
+
+	elseif action.released and gui.pick_node(gui.get_node("Settings"), action.x, action.y) then
+		msg.post("Collection:/controller", "Settings") --sends a mesage to the script main.script which then loads the Collection Settings.
+		print ("loading Settings menu")
+	end
+
+end

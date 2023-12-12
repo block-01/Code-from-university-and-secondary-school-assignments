@@ -1,0 +1,30 @@
+function init(self)
+	msg.post(".", "acquire_input_focus")
+end
+
+function final(self)
+	msg.post(".", "release_input_focus")
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("hide") then
+		msg.post("#", "disable") --Hides the GUI when a message from the script main.script is recived.
+	end
+end
+
+function on_input(self, action_id, action)
+
+  if action.released and gui.pick_node(gui.get_node("Home"), action.x, action.y) then
+    msg.post("/Controller", "Menu_proxy")
+    print ("returning to main menu")
+
+  elseif action.released and gui.pick_node(gui.get_node("Level-01"), action.x, action.y) then
+    msg.post("/Controller", "Level-01_proxy")
+    print ("Loading Level-0l")
+
+  elseif action.released and gui.pick_node(gui.get_node("Level-02"), action.x, action.y) then
+    msg.post("/Controller", "Level-02_proxy")
+    print ("Loading Level-02")
+  end
+
+end

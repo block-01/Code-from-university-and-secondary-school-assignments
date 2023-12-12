@@ -1,0 +1,32 @@
+local function show(self, proxy)
+	if self.current_proxy then
+		msg.post(self.current_proxy, "unload") --unloads the proxy that was previously loaded and loads the current one
+		self.current_proxy = nil
+	end
+	msg.post(proxy, "async_load")
+end
+
+function init(self)
+	msg.post(".", "acquire_input_focus")
+	self.current_proxy = "#LoadGame_proxy"
+	msg.post("#", "show title screen") --displays the GUI
+end
+
+function final(self)
+	msg.post(".", "release_input_focus")
+end
+
+function on_message(self, message_id, message, sender)
+
+	if message_id == hash("Level-01") then
+		show(self, "#Level-01_proxy") --loads the proxy Level-01
+		msg.post("Controller#LoadGame_proxy", "hide") --Hides the load Game GUI
+
+	elseif message_id == hash("Level-02") then
+		show(self, "#Level-02_proxy") --loads the proxy Level-02
+		msg.post("Controller#LoadGame_proxy", "hide") --Hides the load Game GUI
+
+	elseif message_id == hash("proxy_unloaded") then --sends a message to the proxy which unloads the currently loaded proxy
+		print("Unloaded", sender)
+	end
+end

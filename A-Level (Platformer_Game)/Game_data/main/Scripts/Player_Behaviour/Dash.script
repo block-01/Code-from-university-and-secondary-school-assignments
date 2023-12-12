@@ -1,0 +1,36 @@
+--Dash hashes
+local Dash_Up = hash("Dash_Up")
+local Dash_Right = hash("Dash_Right")
+local Dash_Left = hash("Dash_Left")
+
+--Dash animations
+local LDash_anim = hash("LDash_anim")
+local RDash_anim = hash("RDash_anim")
+local UPDash_anim = hash("UPDash_anim")
+
+function init(self)
+	msg.post(".", "acquire_input_focus")
+	self.vel = vmath.vector3()
+end
+
+function update(self, dt)
+	local pos = go.get_position()
+	pos = pos + self.vel * dt
+	go.set_position(pos)
+
+	self.vel.x = 0
+	self.vel.y = 0
+end
+
+function on_input(self, action_id, action)
+	if action_id == hash("Dash_Up") then --when the up arrow key is pressed the up dash is used.
+		self.vel.y = 500
+
+	--elseif action_id == hash("down") then
+		--self.vel.y = -150
+	elseif action_id == hash("Dash_Left") then --when the left arrow key is pressed the left dash is used.
+		self.vel.x = -500
+	elseif action_id == hash("Dash_Right") then --when the right arrow key is pressed the right dash is used.
+		self.vel.x = 500
+	end
+end

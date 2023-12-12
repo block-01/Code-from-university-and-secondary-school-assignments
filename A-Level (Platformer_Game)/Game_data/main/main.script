@@ -1,0 +1,43 @@
+local function show(self, proxy)
+	if self.current_proxy then
+		msg.post(self.current_proxy, "unload")
+
+		self.current_proxy = nil
+	end
+	msg.post(proxy, "async_load")
+end
+
+function init(self)
+	msg.post(".", "acquire_input_focus")
+	self.current_proxy = "#title_proxy"
+	msg.post("#", "show title screen") --displays the GUI
+end
+
+function final(self)
+	msg.post(".", "release_input_focus")
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("show title screen") then
+		show(self, "#title_proxy")
+
+	elseif message_id == hash("New_Game") then
+		show(self, "#NewGame_proxy") --Tells the NewGame_proxy to load the Collection Map-01.
+		msg.post("controller#title", "hide") --Sends a message to the title.gui_script which hides the GUI that is used
+
+	elseif message_id == hash("Load_Game") then
+		show(self, "#LoadGame_proxy") --Tells the LoadGame_proxy to load the Collection Load_Game.
+		msg.post("controller#title", "hide") --Sends a message to the title.gui_script which hides the GUI that is used
+
+	elseif message_id == hash("Settings") then
+		show(self, "#Settings_proxy") --Tells the Settings_proxy to load the Collection Settings.
+		msg.post("controller#title", "hide") --Sends a message to the title.gui_script which hides the GUI that is used
+
+	elseif message_id == hash("proxy_loaded") then
+		self.current_proxy = sender
+		msg.post(sender, "enable")
+
+	elseif message_id == hash("proxy_unloaded") then
+		print("Unloaded", sender)
+	end
+end

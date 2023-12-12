@@ -1,0 +1,18 @@
+function init(self)
+	self.powerups = {
+		Dash_Longer = false,   -- player can double-jump
+	}
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("collision_response") and message.other_group == hash("blaster_powerup") then
+		self.powerups.blaster = true
+		go.delete(sender)	-- remove the powerup
+	end
+end
+
+function on_input(self, action_id, action)
+	if action_id == hash("Dash") and action.pressed and self.powerups.blaster then
+		print("longer dash")
+	end
+end

@@ -1,0 +1,129 @@
+animations {
+  id: "full-01"
+  images {
+    image: "/Art_Assest/UI Elerments/Mana Bar/01/full mana-01_01.png"
+    sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+  }
+  images {
+    image: "/Art_Assest/UI Elerments/Mana Bar/01/full mana-01_02.png"
+    sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+  }
+  images {
+    image: "/Art_Assest/UI Elerments/Mana Bar/01/full mana-01_03.png"
+    sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+  }
+  images {
+    image: "/Art_Assest/UI Elerments/Mana Bar/01/full mana-01_04.png"
+    sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+  }
+  images {
+    image: "/Art_Assest/UI Elerments/Mana Bar/01/full mana-01_05.png"
+    sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+  }
+  images {
+    image: "/Art_Assest/UI Elerments/Mana Bar/01/full mana-01_06.png"
+    sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 60
+  flip_horizontal: 0
+  flip_vertical: 0
+}
+animations {
+  id: "empty-01"
+  images {
+    image: "/Art_Assest/UI Elerments/Mana Bar/01/Empty mana-01.png"
+    sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 60
+  flip_horizontal: 0
+  flip_vertical: 0
+}
+animations {
+  id: "full-02"
+  images {
+    image: "/Art_Assest/UI Elerments/Mana Bar/02/full mana-02_01.png"
+    sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+  }
+  images {
+    image: "/Art_Assest/UI Elerments/Mana Bar/02/full mana-02_02.png"
+    sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+  }
+  images {
+    image: "/Art_Assest/UI Elerments/Mana Bar/02/full mana-02_03.png"
+    sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+  }
+  images {
+    image: "/Art_Assest/UI Elerments/Mana Bar/02/full mana-02_04.png"
+    sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+  }
+  images {
+    image: "/Art_Assest/UI Elerments/Mana Bar/02/full mana-02_05.png"
+    sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+  }
+  images {
+    image: "/Art_Assest/UI Elerments/Mana Bar/02/full mana-02_06.png"
+    sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 60
+  flip_horizontal: 0
+  flip_vertical: 0
+}
+animations {
+  id: "empty-02"
+  images {
+    image: "/Art_Assest/UI Elerments/Mana Bar/02/Empty mana-02.png"
+    sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 60
+  flip_horizontal: 0
+  flip_vertical: 0
+}
+animations {
+  id: "full-03"
+  images {
+    image: "/Art_Assest/UI Elerments/Mana Bar/03/full mana-03_01.png"
+    sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+  }
+  images {
+    image: "/Art_Assest/UI Elerments/Mana Bar/03/full mana-03_02.png"
+    sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+  }
+  images {
+    image: "/Art_Assest/UI Elerments/Mana Bar/03/full mana-03_03.png"
+    sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+  }
+  images {
+    image: "/Art_Assest/UI Elerments/Mana Bar/03/full mana-03_04.png"
+    sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+  }
+  images {
+    image: "/Art_Assest/UI Elerments/Mana Bar/03/full mana-03_05.png"
+    sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+  }
+  images {
+    image: "/Art_Assest/UI Elerments/Mana Bar/03/full mana-03_06.png"
+    sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 60
+  flip_horizontal: 0
+  flip_vertical: 0
+}
+animations {
+  id: "empty-03"
+  images {
+    image: "/Art_Assest/UI Elerments/Mana Bar/03/Empty mana-03.png"
+    sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 60
+  flip_horizontal: 0
+  flip_vertical: 0
+}
+margin: 0
+extrude_borders: 2
+inner_padding: 0
