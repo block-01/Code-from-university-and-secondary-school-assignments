@@ -1,5 +1,5 @@
 # Code from university and Secondary School assignments
-A repository for code from my University coursework (once I finish working on it)
+A repository for code from my University coursework (once I finish working on it and provided I am allowed to open source it)
 
 ## Programs:
 
