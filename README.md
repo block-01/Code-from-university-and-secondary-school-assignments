@@ -8,8 +8,8 @@ A repository for code from my University coursework (once I finish working on it
 | Dice game | Python | Finished (I'm not touching the buggy mess) | Computer Science NEA | GCSE |
 | Platformer Game | Lua (Using the <a href="https://defold.com/" target="_blank">Defold Game Engine</a>) | Finished (development being continued using <a href="https://godotengine.org/" target="_blank">Godot Game Engine</a>) | Computer Science NEA | A-Level |
 | Ticket Management Program | Python | Complete | Software Engineering Fundamentals | University (Level-6 Degree Apprenticeship) |
-| - | - | - | - |
-| - | - | - | - |
+| Database program (test management) | SQL | Complete | Data modelling and Database design | University (Level-6 Degree Apprenticeship) |
+| - | - | - | - | - |
 
 
 # Setting up
